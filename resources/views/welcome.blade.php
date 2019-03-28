@@ -43,11 +43,11 @@
         </div>
         <div class="responsive-opensec">
             <div class="btn-extars">
-                <a href="{{ url('/login')  }}" title="" class="post-job-btn">SOY EMPRESA</a>
                 <ul class="account-btns">
                     <li class="signup-popup"><a title=""><i class="la la-user"></i> Registro</a></li>
                     <li class="signin-popup"><a title=""><i class="la la-key"></i> Entrar</a></li>
                 </ul>
+                <a href="{{ url('/login')  }}" title="" class="post-job-btn">SOY EMPRESA</a>
             </div><!-- Btn Extras -->
             <form class="res-search">
                 <input type="text" placeholder="Job title, keywords or company name" />
@@ -141,12 +141,12 @@
                     <a href="" title=""><img class="hidesticky" src="images/resource/logo.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
                 </div><!-- Logo -->
                 <div class="btn-extars">
-                    <a href="{{ url('/login')  }}" title="" class="post-job-btn">SOY EMPRESA</a>
                     <ul class="account-btns">
                         <li class="signup-popup"><a title=""><i class=""></i> - </a></li>
                         <li class="signup-popup"><a title=""><i class="la la-user"></i>Registro</a></li>
                         <li class="signin-popup"><a title=""><i class="la la-key"></i>Entrar</a></li>
                     </ul>
+                    <a href="{{ url('/login')  }}" title="" class="post-job-btn">SOY EMPRESA</a>
                 </div><!-- Btn Extras -->
                 <nav>
                     <ul>
@@ -734,12 +734,19 @@
         <h3>Login de Usuario</h3>
         <form>
             <div class="cfield">
-                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Email" autofocus/>
                 <i class="la la-envelope-o"></i>
             </div>
             <div class="cfield">
-                <input type="password" placeholder="********" />
+                <input type="password" placeholder="Contraseña" />
                 <i class="la la-key"></i>
+            </div>
+            <div class="dropdown-field">
+                <select name="opcionlogin" data-placeholder="Please Select Specialism" class="chosen">
+                    <option value="seleccionar">_SELECCIONAR</option>
+                    <option value="buscotrabajo">BUSCO TRABAJO</option>
+                    <option value="soyempresa">SOY EMPRESA</option>
+                </select>
             </div>
             <p class="remember-label">
                 <input type="checkbox" name="cb" id="cb1"><label for="cb1">Remember me</label>
@@ -761,23 +768,30 @@
     <div class="account-popup">
         <span class="close-popup"><i class="la la-close"></i></span>
         <h3>Registro de Usuario</h3>
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action= "{{ route('register') }}" >
             @csrf
             <div class="cfield">
-                <input type="text" placeholder="Nombre" />
+                <input value="{{ old('name') }}" class="{{ $errors->has('name') ? 'text-danger' : '' }}" id="name" name="name" type="text" placeholder="Su nombre :)" required autofocus/>
                 <i class="la la-user"></i>
             </div>
             <div class="cfield">
-                <input type="text" placeholder="Correo" />
+                <input value="{{ old('email') }}" class="{{ $errors->has('email') ? 'text-danger' : '' }}" id="email" name="email" type="email" placeholder="Ingrese su correo" required />
                 <i class="la la-envelope-o"></i>
             </div>
             <div class="cfield">
-                <input type="password" placeholder="Contraseña" />
+                <input class="{{ $errors->has('password') ? 'text-danger' : '' }}" id="password" name="password" type="password" placeholder="Clave 8 digitos minimo"  required />
                 <i class="la la-key"></i>
             </div>
             <div class="cfield">
-                <input type="password" placeholder="Conofirmar contraseña" />
+                <input class="{{ $errors->has('password') ? 'text-danger' : '' }}" id="password-confirm" name="password_confirmation" type="password" placeholder="Clave 8 digitos minimo" required />
                 <i class="la la-key"></i>
+            </div>
+            <div class="dropdown-field">
+                <select name="opcionlogin" data-placeholder="Please Select Specialism" class="chosen" required />
+                <option value="SELECCIONAR">_SELECCIONAR</option>
+                <option value="1">BUSCO TRABAJO</option>
+                <option value="2">SOY EMPRESA</option>
+                </select>
             </div>
             <button type="submit">Registrar</button>
         </form>
