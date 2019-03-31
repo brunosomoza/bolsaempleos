@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/perfil';
 
     /**
      * Create a new controller instance.
@@ -53,7 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'opcionlogin'=> ['required', 'string', 'max:1'],
+            'op_login' => ['required', 'string'],
         ]);
     }
 
@@ -65,19 +65,21 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $perfil = intval($data['opcionlogin']);
-
-        if(is_numeric($perfil)) {
+        if($data['op_login'] == "SOYEMPRESA" or $data['op_login'] === "SOYEMPRESA") {
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
-                'perfil' => $data['opcionlogin'],
+                'role_id' => 2,
             ]);
         } else {
-            return redirect()->route('/');
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'role_id' => 1,
+            ]);
         }
-
 
     }
 }

@@ -140,14 +140,7 @@
                 <div class="logo">
                     <a href="" title=""><img class="hidesticky" src="images/resource/logo.png" alt="" /><img class="showsticky" src="images/resource/logo10.png" alt="" /></a>
                 </div><!-- Logo -->
-                <div class="btn-extars">
-                    <ul class="account-btns">
-                        <li class="signup-popup"><a title=""><i class=""></i> - </a></li>
-                        <li class="signup-popup"><a title=""><i class="la la-user"></i>Registro</a></li>
-                        <li class="signin-popup"><a title=""><i class="la la-key"></i>Entrar</a></li>
-                    </ul>
-                    <a href="{{ url('/login')  }}" title="" class="post-job-btn">SOY EMPRESA</a>
-                </div><!-- Btn Extras -->
+                @include('layouts.partials.btn_extras')
                 <nav>
                     <ul>
                         <li class="menu-item-has-children">
@@ -732,21 +725,15 @@
     <div class="account-popup">
         <span class="close-popup"><i class="la la-close"></i></span>
         <h3>Login de Usuario</h3>
-        <form>
+        <form form method="POST" action="{{ route('login') }}">
+            @csrf
             <div class="cfield">
-                <input type="text" placeholder="Email" autofocus/>
+                <input name="email" type="text" placeholder="Email" autofocus/>
                 <i class="la la-envelope-o"></i>
             </div>
             <div class="cfield">
-                <input type="password" placeholder="Contraseña" />
+                <input name="password" type="password" placeholder="Contraseña" />
                 <i class="la la-key"></i>
-            </div>
-            <div class="dropdown-field">
-                <select name="opcionlogin" data-placeholder="Please Select Specialism" class="chosen">
-                    <option value="seleccionar">_SELECCIONAR</option>
-                    <option value="buscotrabajo">BUSCO TRABAJO</option>
-                    <option value="soyempresa">SOY EMPRESA</option>
-                </select>
             </div>
             <p class="remember-label">
                 <input type="checkbox" name="cb" id="cb1"><label for="cb1">Remember me</label>
@@ -787,10 +774,10 @@
                 <i class="la la-key"></i>
             </div>
             <div class="dropdown-field">
-                <select name="opcionlogin" data-placeholder="Please Select Specialism" class="chosen" required />
+                <select name="op_login" id="opcionlogin" data-placeholder="Please Select Specialism" class="chosen" required />
                 <option value="SELECCIONAR">_SELECCIONAR</option>
-                <option value="1">BUSCO TRABAJO</option>
-                <option value="2">SOY EMPRESA</option>
+                <option value="BUSCOTRABAJO">BUSCO TRABAJO</option>
+                <option value="SOYEMPRESA">SOY EMPRESA</option>
                 </select>
             </div>
             <button type="submit">Registrar</button>

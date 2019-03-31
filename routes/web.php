@@ -19,6 +19,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Middleware Auth
+Route::group(['middleware' => ['auth']], function() {
+// Redirecciona al perfil del usuario por perfil
+    Route::get('/perfil', 'Controller@mostrarPerfil')->name('perfil');
+
+});
+
+
 Route::get('/lista_empleos', function () {
     return view('layouts.candidatos.lista_empleos');
 });
@@ -47,9 +55,7 @@ Route::get('/crear_trabajo', function () {
     return view('layouts.empleador.crear_trabajo');
 });
 
-Route::get('/perfil_empresa', function () {
-    return view('layouts.empleador.perfil_empresa');
-});
+
 
 Route::get('/facturas_empresa', function () {
     return view('layouts.empleador.facturas_empresa');
@@ -77,10 +83,6 @@ Route::get('/mas_informacion_candidato', function () {
 
 Route::get('/cv', function () {
     return view('layouts.candidatos.cv');
-});
-
-Route::get('/perfil_candidato', function () {
-    return view('layouts.candidatos.perfil');
 });
 
 Route::get('/busqueda_empleos', function () {

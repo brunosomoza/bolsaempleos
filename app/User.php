@@ -10,6 +10,14 @@ class User extends Authenticatable
 {
     use Notifiable;
     // Yo Inicio
+    public static function navegacion () {
+        return auth()->check() ? auth()->user()->role->name : 'anonimo';
+    }
+
+    public function role () {
+        return $this->belongsTo(Role::class);
+    }
+
     protected $table = 'users';
 
     /**
@@ -18,7 +26,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role_id',
     ];
 
     /**

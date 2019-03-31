@@ -9,14 +9,15 @@
                     <div class="col-lg-12">
                         <div class="account-popup-area signin-popup-box static">
                             <div class="account-popup">
-                                <h3>Acceso para Empresas</h3>
-                                <form>
+                                <h3>Login de Usuario</h3>
+                                <form form method="POST" action="{{ route('login') }}">
+                                    @csrf
                                     <div class="cfield">
-                                        <input type="text" placeholder="Email" />
+                                        <input name="email" type="text" placeholder="Email" required/>
                                         <i class="la la-envelope-o"></i>
                                     </div>
                                     <div class="cfield">
-                                        <input type="password" placeholder="********" />
+                                        <input name="password" type="password" placeholder="********" required/>
                                         <i class="la la-key"></i>
                                     </div>
                                     <p class="remember-label">
