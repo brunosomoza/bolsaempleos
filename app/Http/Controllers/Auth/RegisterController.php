@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Company;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -29,6 +30,7 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/perfil';
+    private $op_login;
 
     /**
      * Create a new controller instance.
@@ -66,6 +68,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         if($data['op_login'] == "SOYEMPRESA" or $data['op_login'] === "SOYEMPRESA") {
+            $this->op_login = $data['op_login'];
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
@@ -82,4 +85,18 @@ class RegisterController extends Controller
         }
 
     }
+
+    protected function registered() {
+        if ( $this->op_login == "SOYEMPRESA" or $this->op_login === "SOYEMPRESA" ) {
+            Company::create([
+                'user_id' => intval(User::max('id'))
+            ]);
+        } else {
+
+        }
+        return redirect('/perfil');
+    }
+
 }
+
+

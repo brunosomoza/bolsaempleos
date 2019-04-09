@@ -95,14 +95,7 @@
                     <div class="col-lg-9 column">
                         <div class="padding-left">
                             <div class="profile-title">
-                                <h3>My Profile</h3>
-                                <div class="upload-img-bar">
-                                    <span class="round"><img src="images/resource/mpf1.jpg" alt="" /><i>x</i></span>
-                                    <div class="upload-info">
-                                        <a href="candidates_profile.html#" title="">Browse</a>
-                                        <span>Max file size is 1MB, Minimum dimension: 270x210 And Suitable files are .jpg & .png</span>
-                                    </div>
-                                </div>
+                                <h3>Completa tus datos por favor...</h3>
                                 <div class="upload-img-bar">
                                     <span class="round"><img src="images/resource/mpf1.jpg" alt="" /><i>x</i></span>
                                     <div class="upload-info">
@@ -112,18 +105,20 @@
                                 </div>
                             </div>
                             <div class="profile-form-edit">
-                                <form>
+                                <form method="POST" action="" >
+                                    @csrf
+                                    @method('PUT')
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <span class="pf-title">Full Name</span>
+                                            <span class="pf-title">Nombe Completo</span>
                                             <div class="pf-field">
-                                                <input type="text" placeholder="Ali TUFAN" />
+                                                <input id="name" name="name" type="text" placeholder="Nombre y Apellido"  autofocus />
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
-                                            <span class="pf-title">Job Title</span>
+                                            <span class="pf-title">Profesión u oficio</span>
                                             <div class="pf-field">
-                                                <input type="text" placeholder="UX / UI Designer" />
+                                                <input id="" type="text" placeholder="UX / UI Designer" />
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -191,7 +186,19 @@
                                                     <option>Diploma</option>
                                                     <option>Inter</option>
                                                     <option>Bachelor</option>
-                                                    <option>Graduate</option>
+                                                    <option>Graduate2</option>
+                                                    <option>Diploma2</option>
+                                                    <option>Inter2</option>
+                                                    <option>Bachelor3</option>
+                                                    <option>Graduate2</option>
+                                                    <option>3Diploma</option>
+                                                    <option>3Inter</option>
+                                                    <option>3Bachelor</option>
+                                                    <option>3Graduate2</option>
+                                                    <option>3Diploma2</option>
+                                                    <option>3Inter2</option>
+                                                    <option>3Bachelor3</option>
+                                                    <option>3Graduate2</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -326,15 +333,6 @@
                                             <span class="pf-title">Longitude</span>
                                             <div class="pf-field">
                                                 <input type="text" placeholder="21.1589654" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <a href="candidates_profile.html#" title="" class="srch-lctn">Search Location</a>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <span class="pf-title">Maps</span>
-                                            <div class="pf-map">
-                                                <div id="map_div"></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
