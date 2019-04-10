@@ -11,10 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Storage::makeDirectory('courses');
-        Storage::makeDirectory('courses2');
-        Storage::deleteDirectory('courses2');
-        Storage::deleteDirectory('courses');
+
+
+//        factory(\App\Type::class, 1)->create(['name' => 'Full Time']);
+//        factory(\App\Type::class, 1)->create(['name' => 'Part Time']);
+//        factory(\App\Type::class, 1)->create(['name' => 'Free Lance']);
+
         // Insertamos Roles en la BD
         factory(\App\Role::class, 1)->create(['name' => 'candidato']);
         factory(\App\Role::class, 1)->create(['name' => 'empresa']);
@@ -37,6 +39,21 @@ class DatabaseSeeder extends Seeder
             ->each(function (\App\User $u) {
                 factory(\App\Company::class, 1)->create(['user_id' => $u->id]);
             });
+
+        factory(\App\User::class, 10)->create()
+            ->each(function (\App\User $u) {
+                factory(\App\Candidate::class, 1)->create(['user_id' => $u->id]);
+            });
+
+        factory(\App\School::class, 30)->create();
+        factory(\App\Job::class, 50)->create();
+        factory(\App\Study::class, 15)->create();
+        factory(\App\Experience::class, 20)->create();
+        factory(\App\Reference::class, 15)->create();
+        factory(\App\Summary::class, 10)->create();
+        factory(\App\Presentation::class, 15)->create();
+        factory(\App\Point::class, 10)->create();
+        factory(\App\Room::class, 10)->create();
 
 
     }

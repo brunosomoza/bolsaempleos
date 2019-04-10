@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Candidate;
 use App\Company;
 use App\User;
 use App\Http\Controllers\Controller;
@@ -92,6 +93,9 @@ class RegisterController extends Controller
                 'user_id' => intval(User::max('id'))
             ]);
         } else {
+            Candidate::create([
+                'user_id' => intval(User::max('id'))
+            ]);
 
         }
         return redirect('/perfil');
