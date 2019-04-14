@@ -14,13 +14,11 @@ class CreateUsersTable extends Migration
     public function up()
     {
 
-
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
         });
-
 
         Schema::create('industries', function (Blueprint $table) {
             $table->increments('id');
@@ -31,26 +29,33 @@ class CreateUsersTable extends Migration
         Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('code')->nullable();
             $table->timestamps();
 
         });
 
         Schema::create('regions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code');
             $table->string('name');
             $table->timestamps();
-
-            $table->unsignedInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries');
         });
 
-        Schema::create('locales', function (Blueprint $table) {
+        Schema::create('provinces', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code');
             $table->string('name');
+            $table->string('coderegion');
             $table->timestamps();
+        });
 
-            $table->unsignedInteger('region_id');
-            $table->foreign('region_id')->references('id')->on('regions');
+        Schema::create('districts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('code');
+            $table->string('name');
+            $table->string('coderegion');
+            $table->string('codeprovince');
+            $table->timestamps();
         });
 
         Schema::create('professions', function (Blueprint $table) {
@@ -87,8 +92,8 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger('region_id')->nullable();
             $table->foreign('region_id')->references('id')->on('regions');
 
-            $table->unsignedInteger('locale_id')->nullable();
-            $table->foreign('locale_id')->references('id')->on('locales');
+            $table->unsignedInteger('district_id')->nullable();
+            $table->foreign('district_id')->references('id')->on('districts');
 
             $table->unsignedInteger('industry_id')->nullable();
             $table->foreign('industry_id')->references('id')->on('industries');
@@ -105,8 +110,8 @@ class CreateUsersTable extends Migration
         });
 
         Schema::create('candidates', function (Blueprint $table) {
-            $table->bigIncrements('id');
 
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
@@ -120,6 +125,19 @@ class CreateUsersTable extends Migration
             $table->boolean('graduate')->nullable();
             $table->string('identification_document')->nullable();
             $table->string('objective')->nullable();
+            $table->string('name')->nullable();
+            $table->string('sexo')->nullable();
+            $table->string('birthdate')->nullable();
+            $table->string('telephone')->nullable();
+            $table->string('address')->nullable();
+            $table->text('skills')->nullable();
+            $table->string('picture')->nullable();
+
+            $table->unsignedInteger('region_id')->nullable();
+            $table->foreign('region_id')->references('id')->on('regions');
+
+            $table->unsignedInteger('district_id')->nullable();
+            $table->foreign('district_id')->references('id')->on('districts');
 
             $table->rememberToken();
             $table->timestamps();
@@ -144,6 +162,12 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger('salary')->nullable();
             $table->boolean('disability')->nullable()->default(false);
             $table->string('status')->nullable();
+
+            $table->unsignedInteger('region_id')->nullable();
+            $table->foreign('region_id')->references('id')->on('regions');
+
+            $table->unsignedInteger('district_id')->nullable();
+            $table->foreign('district_id')->references('id')->on('districts');
             $table->timestamps();
         });
 
@@ -255,6 +279,39 @@ class CreateUsersTable extends Migration
             $table->foreign('candidate_id')->references('id')->on('candidates');
             $table->unsignedBigInteger('job_id');
             $table->foreign('job_id')->references('id')->on('jobs');
+            $table->unsignedBigInteger('company_id');
+            $table->foreign('company_id')->references('id')->on('companies');
+            $table->timestamps();
+        });
+
+        Schema::create('certificates', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('type');
+            $table->unsignedInteger('size');
+            $table->unsignedInteger('downloads');
+            $table->string('url');
+            $table->boolean('public')->default(true);
+
+            $table->unsignedBigInteger('candidate_id');
+            $table->foreign('candidate_id')->references('id')->on('candidates');
+
+            $table->timestamps();
+        });
+
+
+        Schema::create('catalogs', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('type');
+            $table->unsignedInteger('size');
+            $table->unsignedInteger('downloads');
+            $table->string('url');
+            $table->boolean('public')->default(true);
+
+            $table->unsignedBigInteger('candidate_id');
+            $table->foreign('candidate_id')->references('id')->on('candidates');
+
             $table->timestamps();
         });
 
@@ -268,15 +325,18 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('countries');
+        Schema::dropIfExists('regions');
+        Schema::dropIfExists('provinces');
+        Schema::dropIfExists('districts');
+
         Schema::dropIfExists('users');
         Schema::dropIfExists('schools');
         Schema::dropIfExists('industries');
-        Schema::dropIfExists('countries');
-        Schema::dropIfExists('regions');
-        Schema::dropIfExists('locales');
+
         Schema::dropIfExists('professions');
         Schema::dropIfExists('roles');
-        Schema::dropIfExists('users');
+
         Schema::dropIfExists('companies');
         Schema::dropIfExists('candidates');
         Schema::dropIfExists('jobs');
@@ -288,5 +348,7 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('presentations');
         Schema::dropIfExists('points');
         Schema::dropIfExists('rooms');
+        Schema::dropIfExists('certificates');
+        Schema::dropIfExists('catalogs');
     }
 }

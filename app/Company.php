@@ -17,4 +17,17 @@ class Company extends Model
     protected $fillable = [
         'user_id'
     ];
+
+    public function getRegion(){
+        return  $this->hasOne(Region::class)->select('id','name','code');
+    }
+
+    public function getDistrict(){
+        return  $this->hasOne(District::class)->select('id','code','name','coderegion','codeprovince');
+    }
+
+    public function getIndustry(){
+        return $this->hasOne(Industry::class)->select('id','name');
+    }
+
 }

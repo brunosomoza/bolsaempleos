@@ -12,11 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-
-//        factory(\App\Type::class, 1)->create(['name' => 'Full Time']);
-//        factory(\App\Type::class, 1)->create(['name' => 'Part Time']);
-//        factory(\App\Type::class, 1)->create(['name' => 'Free Lance']);
-
         // Insertamos Roles en la BD
         factory(\App\Role::class, 1)->create(['name' => 'candidato']);
         factory(\App\Role::class, 1)->create(['name' => 'empresa']);
@@ -27,11 +22,11 @@ class DatabaseSeeder extends Seeder
         factory(\App\Role::class, 1)->create(['name' => 'anonimo']);
 
         // Insertamos Pais, Regios y Local
-        factory(\App\Country::class, 180)->create();
-        factory(\App\Region::class, 10)->create();
-        factory(\App\Region::class, 10)->create(['country_id' => 2]);
-        factory(\App\Locale::class, 10)->create();
+//        factory(\App\Region::class, 10)->create();
+//        factory(\App\Region::class, 10)->create(['country_id' => 2]);
+//        factory(\App\Locale::class, 10)->create();
 
+        factory(\App\Country::class, 180)->create();
         factory(\App\Industry::class, 10)->create();
         factory(\App\Profession::class,10)->create();
 
@@ -54,7 +49,6 @@ class DatabaseSeeder extends Seeder
         factory(\App\Presentation::class, 15)->create();
         factory(\App\Point::class, 10)->create();
         factory(\App\Room::class, 10)->create();
-
 
     }
 }

@@ -9,6 +9,7 @@ $factory->define(App\Room::class, function (Faker $faker) {
         'url' => $faker->url,
         'clave' => $faker->word,
         'candidate_id' => $faker->numberBetween(1,10),
+        'company_id' => $faker->numberBetween(1,10),
         'job_id' => $faker->numberBetween(1,10)
 
     ];
