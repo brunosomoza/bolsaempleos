@@ -7,6 +7,6 @@ $factory->define(App\Point::class, function (Faker $faker) {
         'experience' => $faker->randomFloat(1,2,7),
         'study' => $faker->randomFloat(1,2,7),
         'portfolio' => $faker->randomFloat(1,2,7),
-        'candidate_id' => $faker->numberBetween(1,10)
+        'candidate_id' => $faker->numberBetween(1,9)
     ];
 });

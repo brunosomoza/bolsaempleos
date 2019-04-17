@@ -3,11 +3,20 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Webpatser\Uuid\Uuid;
 
 class Candidate extends Model
 {
+//    public static function boot()
+//    {
+//       parent::boot();
+//        self::creating(function ($model) {
+//            $model->uuid = (string) Uuid::generate(4);
+//        });
+//    }
+
     protected $fillable = [
-        'user_id', 'profession_id'
+        'user_id', 'profession_id', 'email'
     ];
 
     public function getProfession(){
@@ -52,6 +61,10 @@ class Candidate extends Model
 
     public function getRooms(){
         return $this->hasMany(Room::class);
+    }
+
+    public function getJobs(){
+        return $this->belongsToMany(Job::class);
     }
 
 

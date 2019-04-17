@@ -30,6 +30,11 @@ class DatabaseSeeder extends Seeder
         factory(\App\Industry::class, 10)->create();
         factory(\App\Profession::class,10)->create();
 
+        factory(\App\User::class, 1)->create(['email' => 'bruno@bruno.com', 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'])
+            ->each(function (\App\User $u) {
+                factory(\App\Candidate::class, 1)->create(['user_id' => $u->id]);
+            });
+
         factory(\App\User::class, 10)->create()
             ->each(function (\App\User $u) {
                 factory(\App\Company::class, 1)->create(['user_id' => $u->id]);
@@ -39,6 +44,8 @@ class DatabaseSeeder extends Seeder
             ->each(function (\App\User $u) {
                 factory(\App\Candidate::class, 1)->create(['user_id' => $u->id]);
             });
+
+
 
         factory(\App\School::class, 30)->create();
         factory(\App\Job::class, 50)->create();

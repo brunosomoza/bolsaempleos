@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Country;
 use App\Locale;
 use App\Region;
@@ -21,8 +22,14 @@ class Controller extends BaseController
 
         if( Auth::user()->role_id == 1){
             return view('layouts.candidatos.perfil');
+
+
         } elseif (Auth::user()->role_id == 2 ) {
-            return view('layouts.empleador.perfil');
+
+            $id = Auth::user()->id;
+            $empresa = Company::find($id);
+
+            return view('layouts.empleador.perfil',compact('empresa'));
         }else{
             return view('welcome');
         }

@@ -4,6 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Study::class, function (Faker $faker) {
     return [
+        'code' => $faker->uuid,
         'candidate_id' => $faker->numberBetween(1,9),
         'school_id' => $faker->numberBetween(1,9),
         'status' => \App\Study::TERMINADO,

@@ -75,7 +75,6 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger('role_id');
             $table->foreign('role_id')->references('id')->on('roles');
-            $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -98,6 +97,7 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger('industry_id')->nullable();
             $table->foreign('industry_id')->references('id')->on('industries');
 
+            $table->string('code_districts')->nullable();
             $table->string('ruc')->nullable();
             $table->string('address')->nullable();
             $table->string('logo')->nullable();
@@ -145,7 +145,7 @@ class CreateUsersTable extends Migration
 
         Schema::create('jobs', function (Blueprint $table) {
             $table->bigIncrements('id');
-
+            $table->uuid('code');
             $table->unsignedBigInteger('company_id');
             $table->foreign('company_id')->references('id')->on('companies');
 
@@ -174,9 +174,9 @@ class CreateUsersTable extends Migration
         Schema::create('candidate_job', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unsignedBigInteger('company_id');
-            $table->foreign('company_id')->references('id')->on('companies');
-
+            $table->unsignedBigInteger('candidate_id');
+            $table->foreign('candidate_id')->references('id')->on('candidates');
+            $table->uuid('code');
             $table->unsignedBigInteger('job_id');
             $table->foreign('job_id')->references('id')->on('jobs');
 
@@ -185,6 +185,7 @@ class CreateUsersTable extends Migration
 
         Schema::create('studies', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('code');
             $table->unsignedBigInteger('candidate_id');
             $table->foreign('candidate_id')->references('id')->on('candidates');
 
@@ -201,6 +202,7 @@ class CreateUsersTable extends Migration
 
         Schema::create('experiences', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('code');
             $table->string('name');
             $table->string('title');
             $table->date('start');
@@ -216,6 +218,7 @@ class CreateUsersTable extends Migration
 
         Schema::create('references', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('code');
             $table->string('name');
             $table->string('title');
             $table->string('telephone');
@@ -248,14 +251,12 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->unsignedInteger('size');
-            $table->unsignedInteger('downloads');
+            $table->unsignedInteger('views');
             $table->string('url');
             $table->boolean('public')->default(true);
             $table->unsignedInteger('duration');
-
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-
+            $table->unsignedBigInteger('candidate_id');
+            $table->foreign('candidate_id')->references('id')->on('candidates');
             $table->timestamps();
         });
 
@@ -271,6 +272,7 @@ class CreateUsersTable extends Migration
 
         Schema::create('rooms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('code');
             $table->unsignedInteger('minutes');
             $table->boolean('recorded');
             $table->string('url');
@@ -286,26 +288,26 @@ class CreateUsersTable extends Migration
 
         Schema::create('certificates', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('code');
             $table->string('name');
             $table->string('type');
             $table->unsignedInteger('size');
-            $table->unsignedInteger('downloads');
+            $table->unsignedInteger('views');
             $table->string('url');
             $table->boolean('public')->default(true);
-
             $table->unsignedBigInteger('candidate_id');
             $table->foreign('candidate_id')->references('id')->on('candidates');
-
             $table->timestamps();
         });
 
 
         Schema::create('catalogs', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->uuid('code');
             $table->string('name');
             $table->string('type');
             $table->unsignedInteger('size');
-            $table->unsignedInteger('downloads');
+            $table->unsignedInteger('views');
             $table->string('url');
             $table->boolean('public')->default(true);
 

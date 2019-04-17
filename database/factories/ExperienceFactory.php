@@ -4,6 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Experience::class, function (Faker $faker) {
     return [
+        'code' => $faker->uuid,
         'name' => $faker->name,
         'title' => $faker->name,
         'start' => $faker->date(),
@@ -14,3 +15,4 @@ $factory->define(App\Experience::class, function (Faker $faker) {
         'candidate_id' => $faker->numberBetween(1,9)
     ];
 });
+

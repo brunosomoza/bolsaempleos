@@ -16,8 +16,8 @@ class CompanyController extends Controller
         $empresa->ruc = $request->get('ruc');
         $empresa->namesocial = $request->get('namesocial');
         $empresa->address = $request->get('address');
-        $empresa->region_id = 1;
-        $empresa->locale_id = 1;
+
+        $empresa->code_districts = $request->get('code_districts');
         $empresa->description = $request->get('description');
         $empresa->industry_id = (int) $request->get('industria');
         $empresa->save();
@@ -27,8 +27,8 @@ class CompanyController extends Controller
 
     public function getEmployees($id){
         // Fetch Employees by Departmentid
-        $userData['data'] = DB::table('regions')
-            ->where('country_id', '=', $id)
+        $userData['data'] = DB::table('districts')
+            ->where('coderegion', '=', $id)
             ->get();
 
         echo json_encode($userData);

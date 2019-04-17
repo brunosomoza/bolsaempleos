@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Webpatser\Uuid\Uuid;
 
 /**
  * App\Company
@@ -14,6 +15,14 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Company extends Model
 {
+//    public static function boot()
+//    {
+//        parent::boot();
+//        self::creating(function ($model) {
+//            $model->uuid = (string) Uuid::generate(4);
+//        });
+//    }
+
     protected $fillable = [
         'user_id'
     ];
