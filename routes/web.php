@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |*/
 
+Route::get('image-upload', 'ImageUploadController@imageUpload')->name('image.upload');
+Route::post('image-upload', 'ImageUploadController@imageUploadPost')->name('image.upload.post');
+
+
 Route::get('/indonesia','CountryController@provinces');
 
 Route::get('/json-regencies/{id}','CountryController@regencies');

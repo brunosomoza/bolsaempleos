@@ -85,7 +85,7 @@
                                 <div class="upload-img-bar">
                                     <span><img src="images/resource/up1.jpg" alt="" /><i>x</i></span>
                                     <div class="upload-info">
-                                        <a href="employer_profile.html#" title="">Browse</a>
+                                        <input type="file">
                                         <span>Max file size is 1MB, Minimum dimension: 270x210 And Suitable files are .jpg & .png</span>
                                     </div>
                                 </div>
