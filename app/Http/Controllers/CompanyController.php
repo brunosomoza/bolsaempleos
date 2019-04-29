@@ -7,6 +7,7 @@ use App\Region;
 use Auth;
 use DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CompanyController extends Controller
 {
@@ -34,4 +35,28 @@ class CompanyController extends Controller
         echo json_encode($userData);
         exit;
     }
+
+
+    public  function  guardarImagenPefil( Request $request){
+        if ($request->hasFile('avatar')) {
+            $file = $request->file('avatar');
+            $name = time().$file->getClientOriginalName();
+
+//            // Para mover archivos locales
+//            $destinationPath = public_path('/images');
+//            $file->move($destinationPath, $name);
+
+//            //
+//            $file = $request->file('image');
+//            $name = time() . $file->getClientOriginalName();
+
+            $filePath = 'images/' . $name;
+            Storage::disk('s3')->put($filePath, file_get_contents($file));
+
+
+        }
+        return $name;
+        //return redirect('/perfil');
+    }
+
 }

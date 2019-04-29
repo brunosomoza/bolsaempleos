@@ -81,14 +81,20 @@
                     <div class="col-lg-9 column">
                         <div class="padding-left">
                             <div class="profile-title" id="mp">
-                                <h3>Completa los datos por favor...</h3>
-                                <div class="upload-img-bar">
-                                    <span><img src="images/resource/up1.jpg" alt="" /><i>x</i></span>
-                                    <div class="upload-info">
-                                        <input type="file">
-                                        <span>Max file size is 1MB, Minimum dimension: 270x210 And Suitable files are .jpg & .png</span>
+                                <form action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <h3>Completa los datos por favor...</h3>
+                                    <div class="upload-img-bar">
+                                        <span>
+                                            <img src="images/resource/up1.jpg" alt="" /><i>x</i>
+                                        </span>
+                                        <div class="upload-info">
+                                            <input type="file" name="avatar" id="avatar">
+                                            <span>Max is 1MB, Minimum dimension: 270x210 And Suitable files are .jpg & .png</span>
+                                            <button type="submit" class="upload-img-bar">Guardar </button>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                             <div class="profile-form-edit">
                                 <form method="POST" action="{{ route('actualizar_perfil_empresa') }}" >
