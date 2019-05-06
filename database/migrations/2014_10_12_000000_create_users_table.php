@@ -116,7 +116,7 @@ class CreateUsersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->unsignedInteger('profession_id')->nullable();
-            $table->foreign('profession_id')->references('id')->on('professions');
+            //$table->foreign('profession_id')->references('id')->on('professions');
 
             $table->unsignedInteger('country_id')->nullable();
             $table->foreign('country_id')->references('id')->on('countries');
@@ -127,17 +127,26 @@ class CreateUsersTable extends Migration
             $table->string('objective')->nullable();
             $table->string('name')->nullable();
             $table->string('sexo')->nullable();
-            $table->string('birthdate')->nullable();
+            $table->date('birthdate')->nullable();
             $table->string('telephone')->nullable();
             $table->string('address')->nullable();
+            $table->string('civil')->nullable();
             $table->text('skills')->nullable();
             $table->string('picture')->nullable();
+            $table->string('title')->nullable();
+            $table->string('district')->nullable();
+            $table->string('language')->nullable();
+            $table->string('level_language')->nullable();
+            $table->unsignedInteger('years_experience')->nullable();
+            $table->unsignedInteger('price_hour')->nullable();
+            $table->unsignedInteger('price_hour_min')->nullable();
+            $table->string('region')->nullable();
 
-            $table->unsignedInteger('region_id')->nullable();
-            $table->foreign('region_id')->references('id')->on('regions');
-
-            $table->unsignedInteger('district_id')->nullable();
-            $table->foreign('district_id')->references('id')->on('districts');
+//            $table->unsignedInteger('region_id')->nullable();
+//            $table->foreign('region_id')->references('id')->on('regions');
+//
+//            $table->unsignedInteger('district_id')->nullable();
+//            $table->foreign('district_id')->references('id')->on('districts');
 
             $table->rememberToken();
             $table->timestamps();

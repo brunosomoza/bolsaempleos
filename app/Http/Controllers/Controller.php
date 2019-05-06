@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Candidate;
 use App\Company;
 use App\Country;
 use App\Locale;
@@ -12,6 +13,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Storage;
 use phpDocumentor\Reflection\Types\Integer;
 
 class Controller extends BaseController
@@ -21,15 +23,19 @@ class Controller extends BaseController
     public function mostrarPerfil(){
 
         if( Auth::user()->role_id == 1){
-            return view('layouts.candidatos.perfil');
+            $id = Auth::user()->id;
+            $candidato = Candidate::find($id);
+            $url = Storage::temporaryUrl($candidato->picture, now()->addMinutes(5));
+            return view('layouts.candidatos.perfil',compact('candidato','url'));
 
 
         } elseif (Auth::user()->role_id == 2 ) {
 
             $id = Auth::user()->id;
             $empresa = Company::find($id);
+            $url = Storage::temporaryUrl($empresa->logo, now()->addMinutes(5));
 
-            return view('layouts.empleador.perfil',compact('empresa'));
+            return view('layouts.empleador.perfil',compact('empresa','url'));
         }else{
             return view('welcome');
         }

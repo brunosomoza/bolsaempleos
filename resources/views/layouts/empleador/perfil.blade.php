@@ -81,12 +81,12 @@
                     <div class="col-lg-9 column">
                         <div class="padding-left">
                             <div class="profile-title" id="mp">
-                                <form action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('avatar.upload.post.company') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <h3>Completa los datos por favor...</h3>
                                     <div class="upload-img-bar">
                                         <span>
-                                            <img src="images/resource/up1.jpg" alt="" /><i>x</i>
+                                            <img src="{{ $url }}" alt="" /><i>x</i>
                                         </span>
                                         <div class="upload-info">
                                             <input type="file" name="avatar" id="avatar">
@@ -100,7 +100,6 @@
                                 <form method="POST" action="{{ route('actualizar_perfil_empresa') }}" >
                                     @csrf
                                     @method('PUT')
-
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <span class="pf-title">Razón Social</span>
@@ -197,9 +196,9 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
-                                            <span class="pf-title">Unicación Departamento :  </span>
+                                            <span class="pf-title">Actual Departamento :  </span>
                                             <div class="pf-field">
-                                                <select id="sel_depart" name="sel_depart" data-placeholder="Please Select Specialism" class="chosen">
+                                                <select id="departamentos" name="departamentos" data-placeholder="Please Select Specialism" class="chosen">
                                                     <option value="0">_SELECCIONAR</option>
                                                     <option value="010000">Amazonas</option>
                                                     <option value="020000">Ancash</option>
@@ -230,7 +229,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
-                                            <span class="pf-title">Distritos : {{ $empresa->code_districts }} </span>
+                                            <span class="pf-title">Distrito Actual : {{ $empresa->code_districts }} </span>
                                             <div class="pf-field">
                                                 <input type="text" id="distritos" list="json-datalist" placeholder="_Escribir" name="code_districts"  >
                                                 <datalist id="json-datalist" ></datalist>
@@ -246,7 +245,7 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <button type="submit">Actualizar información </button>
-                                            <input type="button" name="x1" id="x1">
+                                            <input type="button" name="x1" id="x1" value="borrar">
                                         </div>
                                     </div>
                                     {{ csrf_field() }}
@@ -274,23 +273,19 @@
         $(document).ready(function(){
 
             $("#x1").click(function () {
-               alert($("#distritos").val());
+                alert($("#distritos").val());
             });
 
-
-
             // Department Change
-            $("#sel_depart").change(function(){
+            $("#departamentos").change(function(){
 
                 // Department id
-                var id = $(this).val();
+                var idDepartmento = $(this).val();
                 $("#json-datalist").empty();
-                // Empty the dropdown
-                $("#sel_emp").find("option").not(":first").remove();
 
                 // AJAX request
                 $.ajax({
-                    url: 'getEmployees/'+id,
+                    url: 'getDistritos/'+idDepartmento,
                     type: 'get',
                     dataType: 'json',
                     success: function(response){

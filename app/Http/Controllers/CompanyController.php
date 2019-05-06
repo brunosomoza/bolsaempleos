@@ -17,7 +17,6 @@ class CompanyController extends Controller
         $empresa->ruc = $request->get('ruc');
         $empresa->namesocial = $request->get('namesocial');
         $empresa->address = $request->get('address');
-
         $empresa->code_districts = $request->get('code_districts');
         $empresa->description = $request->get('description');
         $empresa->industry_id = (int) $request->get('industria');
@@ -37,26 +36,25 @@ class CompanyController extends Controller
     }
 
 
-    public  function  guardarImagenPefil( Request $request){
+    public  function  guardarImagenPerfil( Request $request){
+        $this->validate($request, [
+            'avatar' => 'required|image|max:2048'
+        ]);
+
         if ($request->hasFile('avatar')) {
             $file = $request->file('avatar');
             $name = time().$file->getClientOriginalName();
-
-//            // Para mover archivos locales
-//            $destinationPath = public_path('/images');
-//            $file->move($destinationPath, $name);
-
-//            //
-//            $file = $request->file('image');
-//            $name = time() . $file->getClientOriginalName();
-
             $filePath = 'images/' . $name;
             Storage::disk('s3')->put($filePath, file_get_contents($file));
-
+            //$url = Storage::url($filePath);
+            $id = Auth::user()->id;
+            $empresa = Company::find($id);
+            $empresa->logo = $filePath;
+            $empresa->save();
 
         }
-        return $name;
-        //return redirect('/perfil');
+        return redirect('/perfil');
+
     }
 
 }
