@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Webpatser\Uuid\Uuid;
 
-class Study extends Model
+class   Study extends Model
 {
 //    public static function boot()
 //    {
@@ -14,6 +14,10 @@ class Study extends Model
 //            $model->uuid = (string) Uuid::generate(4);
 //        });
 //    }
+
+    protected $table = "studies";
+
+    protected $fillable = ['code', 'status', 'start', 'end', 'name'];
 
     public function getRouteKeyName()
     {

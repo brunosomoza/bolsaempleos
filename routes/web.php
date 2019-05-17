@@ -19,6 +19,13 @@ Route::group(['middleware' => ['auth']], function() {
     // Redirect to profile  user by Role
     Route::get('/perfil', 'Controller@mostrarPerfil')->name('perfil');
 
+    Route::delete('/eliminarIDEstudio/{id}', 'StudyController@eliminarIDEstudio');
+    Route::post('/registrarEstudios', 'StudyController@registrarEstudios')->name('registrar.estudios');
+    Route::get('/verInformacionCandidato', 'StudyController@getEstudios')->name('ver.informacion.candidato');
+//    Route::get('/verInformacionCandidato', function () {
+//        return view('layouts.candidatos.informacion');
+//    });
+
 });
 
 

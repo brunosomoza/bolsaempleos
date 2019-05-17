@@ -7,6 +7,7 @@
       <w>basico</w>
       <w>birthdate</w>
       <w>candidato</w>
+      <w>candidatos</w>
       <w>celular</w>
       <w>coderegion</w>
       <w>contacto</w>
@@ -18,12 +19,14 @@
       <w>empresa</w>
       <w>empresarial</w>
       <w>estado</w>
+      <w>estudios</w>
       <w>experiencia</w>
       <w>femenino</w>
       <w>genero</w>
       <w>guardar</w>
       <w>imagen</w>
       <w>industria</w>
+      <w>informacion</w>
       <w>ingles</w>
       <w>intermedio</w>
       <w>languaue</w>

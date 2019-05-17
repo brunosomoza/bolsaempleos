@@ -142,9 +142,9 @@
                        title="Salir"><i class="la la-close"></i> Salir
                     </a>
                 </li>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+{{--                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+{{--                    @csrf--}}
+{{--                </form>--}}
             </ul>
         </div><!-- Btn Extras -->
         <form class="res-search">

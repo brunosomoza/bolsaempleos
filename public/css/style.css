@@ -826,7 +826,7 @@ label::after {
     width: 460px;
     background: #ffffff;
     z-index: 1;
-    
+
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -840,6 +840,7 @@ label::after {
     text-align: center;
     padding: 40px 60px;
 }
+
 .account-popup > h3 {
     float: left;
     width: 100%;
@@ -847,7 +848,7 @@ label::after {
     color: #222222;
     font-weight: bold;
     margin: 0;
-        margin-bottom: 0px;
+    margin-bottom: 0px;
     margin-bottom: 12px;
     line-height: 10px;
 }
@@ -897,7 +898,7 @@ label::after {
     position: relative;
     margin-bottom: 19px;
     border: 2px solid #e8ecec;
-    
+
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -905,6 +906,7 @@ label::after {
     border-radius: 8px;
 
 }
+
 .account-popup > form .cfield input {
     float: left;
     width: 100%;
@@ -944,7 +946,7 @@ label::after {
     font-weight: bold;
     letter-spacing: 0.3px;
     margin-top: 20px;
-    
+
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -1030,7 +1032,7 @@ label::after {
     line-height: 50px;
     color: #ffffff;
     font-size: 20px;
-    
+
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -11247,7 +11249,7 @@ footer.ft .scrollup {
     left: auto;
 }
 .edu-history-sec .action_job li a {
-    font-size: 19px;
+    font-size: 22px;
     color: #8b91dd;
 }
 .mp-col .action_job {

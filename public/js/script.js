@@ -76,6 +76,40 @@ $(document).on('ready',function(){
         $('html').removeClass('no-scroll');
     });
 
+    /* Registro Estudios */
+    $('.estudios-popup').on('click', function(){
+        $('.estudios-popup-box').fadeIn('fast');
+        $('html').addClass('no-scroll');
+    });
+    $('.close-popup').on('click', function(){
+        $('.estudios-popup-box').fadeOut('fast');
+        $('.eliminar-estudios-popup-box').fadeOut('fast');
+        $('html').removeClass('no-scroll');
+    });
+
+    $('#agregarStudy').on('submit', function(e){
+        e.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "/registrarEstudios",
+            data: $('#agregarStudy').serialize(),
+            success: function (response) {
+                console.log(response)
+                $('.estudios-popup-box').fadeOut('fast');
+                $('html').removeClass('no-scroll');
+                alert('Se gurado.');
+            },
+            error: function (error) {
+                console.log(error)
+                alert("No se guardo");
+            }
+        });
+
+    });
+
+
+
     /*** QUICK POST SHARE ***/
     $('.select-user > span').on('click', function (){
         $('.select-user > span').removeClass('active');

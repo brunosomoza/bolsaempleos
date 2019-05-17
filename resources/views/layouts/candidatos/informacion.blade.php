@@ -96,36 +96,26 @@
                     <div class="col-lg-9 column">
                         <div class="padding-left">
                             <div class="manage-jobs-sec">
-                                <div class="border-title"><h3>Candidates Dashboard</h3><a href="candidates_my_resume.html#" title=""><i class="la la-plus"></i> Add Education</a></div>
-                                <div class="edu-history-sec">
-                                    <div class="edu-history">
-                                        <i class="la la-graduation-cap"></i>
-                                        <div class="edu-hisinfo">
-                                            <h3>University</h3>
-                                            <i>2008 - 2012</i>
-                                            <span>Middle East Technical University <i>Computer Science</i></span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                                <div class="border-title"><h3>Estudios realizados</h3><a class="estudios-popup " title=""><i class="la la-plus"></i> Agregar estudios</a></div>
+                                @forelse($estudios as $e)
+                                    <div class="edu-history-sec" >
+                                        <div class="edu-history">
+                                            <i class="la la-graduation-cap"></i>
+                                            <div class="edu-hisinfo">
+                                                <h3>{{$e->id}}Universuty</h3>
+                                                <i> 2008 - 2012</i>
+                                                <span>Middle East Technical University <i>Computer Science</i></span>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                                            </div>
+                                            <ul class="action_job">
+                                                <li class="btnEditarEstudio"><span>Editar</span><a title=""><i class="la la-pencil"></i></a></li>
+                                                <li class="btnEliminarEstudio" id="7b499bbe-b269-38fd-b6a3-fb3b01fcfe09"><span>Eliminar</span><a title=""><i class="la la-trash-o"></i></a></li>
+                                            </ul>
                                         </div>
-                                        <ul class="action_job">
-                                            <li><span>Edit</span><a href="candidates_my_resume.html#" title=""><i class="la la-pencil"></i></a></li>
-                                            <li><span>Delete</span><a href="candidates_my_resume.html#" title=""><i class="la la-trash-o"></i></a></li>
-                                        </ul>
                                     </div>
-                                    <div class="edu-history">
-                                        <i class="la la-graduation-cap"></i>
-                                        <div class="edu-hisinfo">
-                                            <h3>High School</h3>
-                                            <i>2008 - 2012</i>
-                                            <span>Tomms College <i>Bachlors in Fine Arts</i></span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                                        </div>
-                                        <ul class="action_job">
-                                            <li><span>Edit</span><a href="candidates_my_resume.html#" title=""><i class="la la-pencil"></i></a></li>
-                                            <li><span>Delete</span><a href="candidates_my_resume.html#" title=""><i class="la la-trash-o"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="border-title"><h3>Work Experience</h3><a href="candidates_my_resume.html#" title=""><i class="la la-plus"></i> Add Experience</a></div>
+                                @empty
+                                @endforelse
+                                <div class="border-title"><h3>Work Experience</h3><a title=""><i class="la la-plus"></i> Add Experience</a></div>
                                 <div class="edu-history-sec">
                                     <div class="edu-history style2">
                                         <i></i>
@@ -259,5 +249,112 @@
         </div>
     </section>
 
+    <!-- Inicio Agregar Estudio -->
+    <div class="account-popup-area estudios-popup-box" >
+        <div class="account-popup">
+            <span class="close-popup"><i class="la la-close"></i></span>
+            <h3>Registrar Estudios</h3>
+            <form id="agregarStudy">
+                {{ csrf_field() }}
+                <div class="cfield">
+                    <input type="text" placeholder="Nombre institucion educativa" name="nombreUniversidad" id="nombreUniversidad" />
+                    <i class="la la-home"></i>
+                </div>
+                <div class="cfield">
+                    <input type="text" placeholder="Nombre carrera ó curso" name="nombreCarrera" id="nombreCarrera" />
+                    <i class="la la-book"></i>
+                </div>
+                <div class="cfield" style="width: 50%">
+                    <input type="date" name="inicioEstudio" id="inicioEstudio" />
+                    <i class="la la-calendar-minus-o"></i>
+                </div>
+                <div class="cfield" style="width: 50%">
+                    <input type="date"  name="finEstudio" id="finEstudio"  />
+                    <i class="la la-calendar-plus-o"></i>
 
+                </div>
+                <div class="cfield">
+                    <input type="text" placeholder="Email" />
+                    <i class="la la-envelope-o"></i>
+                </div>
+                <div class="dropdown-field">
+                    <select data-placeholder="Please Select Specialism" class="chosen" name="estado">
+                        <option value="0">_SELECCIONAR ESTADO</option>
+                        <option value="TERMINADO">TERMINADO</option>
+                        <option value="ESTUDIANDO">ESTUDIANDO</option>
+                        <option value="ABANDONADO">ABANDONADO</option>
+                    </select>
+                </div>
+                <button type="submit" class="agregarEstudio" >Guardar</button>
+            </form>
+            <div class="extra-login">
+                <span>Or</span>
+                <div class="login-social">
+                    <a class="fb-login" href="login.html#" title=""><i class="fa fa-facebook"></i></a>
+                    <a class="tw-login" href="login.html#" title=""><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN Agregar Estudio -->
+
+
+
+    <!-- Eliminar Estudio-->
+    <div class="account-popup-area eliminar-estudios-popup-box" id="eliminar-estudios-popup-box" >
+        <div class="account-popup" >
+            <span class="close-popup"><i class="la la-close"></i></span>
+            <h4>Eliminará el estudio seleccionado ?</h4>
+            <form id="frmEliminarIDEstudio">
+                {{ csrf_field() }}
+                {{ method_field('delete') }}
+                <input type="hidden" id="IDEstudio" name="IDEstudio">
+                <button type="submit" class="" >Eliminar</button>
+            </form>
+            <div class="extra-login">
+                <span>Or</span>
+                <div class="login-social">
+                    <a class="fb-login" href="login.html#" title=""><i class="fa fa-facebook"></i></a>
+                    <a class="tw-login" href="login.html#" title=""><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Eliminar Estudio -->
 @endsection
+@push('java')
+    <script type='text/javascript'>
+
+        $(document).ready(function(){
+            $('.btnEliminarEstudio').on('click', function(){
+                console.log('click');
+                $('.eliminar-estudios-popup-box').fadeIn('fast');
+                $('html').addClass('no-scroll');
+                $('#IDEstudio').val($(this).attr('id'));
+            });
+
+            $('#frmEliminarIDEstudio').on('submit', function(e){
+                e.preventDefault();
+                var id = $('#IDEstudio').val();
+               console.log(id);
+                $.ajax({
+                    type: "POST",
+                    url: "/eliminarIDEstudio/"+id,
+                    data: $('#frmEliminarIDEstudio').serialize(),
+                    success: function (response) {
+                        console.log(id);
+                        $('.eliminar-estudios-popup-box').fadeOut('fast');
+                        $('html').removeClass('no-scroll');
+                        alert('Se borro con exito.');
+                    },
+                    error: function (error) {
+                        console.log(error)
+                        alert("Error :" +error);
+                    }
+                });
+            });
+
+        });
+
+    </script>
+@endpush
