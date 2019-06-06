@@ -80,56 +80,40 @@
                     <div class="col-lg-9 column">
                         <div class="padding-left">
                             <div class="profile-title">
-                                <h3>Post a New Job</h3>
+                                <h3>Crear reunion</h3>
                             </div>
                             <div class="profile-form-edit">
-                                <form method="POST" action="{{route('registrar.job')}}">
+                                <form method="POST" action="{{route('registrar.reunion')}}">
                                     @csrf
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <span class="pf-title">Nombre del anuncio</span>
+                                            <span class="pf-title">ID Meeting</span>
                                             <div class="pf-field">
-                                                <input type="text" name="name" placeholder="Ejemplo: Desarrollador Movil Android " />
+                                                <input type="text" name="meetingID" placeholder="Nombre de la reunion " />
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <span class="pf-title">Description</span>
+                                            <span class="pf-title">Nombre reunión</span>
                                             <div class="pf-field">
-                                                <textarea rows="3" name="description" placeholder="Descripcion de la oferta de trabajo"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <span class="pf-title">Tipo de Trabajo</span>
-                                            <div class="pf-field">
-                                                <select name="tipo_trabajo" data-placeholder="Please Select Specialism" class="chosen">
-                                                    <option value="FULLTIME">Full Time</option>
-                                                    <option value="PARTIME">Par Time</option>
-                                                    <option value="FREELANCE">Freelance</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <span class="pf-title">Fecha de Contratacion</span>
-                                            <div class="pf-field">
-                                                <input name="fecha_contratacion" type="date"  class="form-control datepicker" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <span class="pf-title">Oferta Salarial</span>
-                                            <div class="pf-field">
-                                                <input name="salary" type="number" min="0" max="99999" class="form-control" />
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <span class="pf-title">Años de experiencia</span>
-                                            <div class="pf-field">
-                                                <input name="experiencia" type="number" min="0" max="40" class="form-control" />
+                                                <input type="text" name="meetingName" placeholder="Nombre de la reunion " />
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <span class="pf-title">Fecha límite de solicitud</span>
+                                            <span class="pf-title">Clave invitado</span>
                                             <div class="pf-field">
-                                                <input type="date" placeholder="01.11.207"  class="form-control datepicker" />
+                                                <input type="text" name="attendee_password" placeholder="Nombre de la reunion " />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <span class="pf-title">Clave moderador</span>
+                                            <div class="pf-field">
+                                                <input type="text" name="moderator_password" placeholder="Nombre de la reunion " />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <span class="pf-title">duration</span>
+                                            <div class="pf-field">
+                                                <input type="numer" min="30" max="90" name="duration" placeholder="Nombre de la reunion " />
                                             </div>
                                         </div>
                                         <div class="col-lg-12">

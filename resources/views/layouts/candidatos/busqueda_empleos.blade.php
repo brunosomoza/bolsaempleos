@@ -9,28 +9,55 @@
                         <div class="widget">
                             <div class="search_widget_job">
                                 <div class="field_w_search">
-                                    <input type="text" placeholder="Search Keywords" />
+                                    <input type="text" placeholder="Escriba cargo o área" />
                                     <i class="la la-search"></i>
-                                </div><!-- Search Widget -->
+                                </div>
+                                <!-- Search Widget -->
                                 <div class="field_w_search">
-                                    <input type="text" placeholder="All Locations" />
-                                    <i class="la la-map-marker"></i>
+                                        <select data-placeholder="Departamento ó ciudad" class="chosen-city">
+                                            <option value="150000">Lima</option>
+                                            <option value="010000">Amazonas</option>
+                                            <option value="020000">Ancash</option>
+                                            <option value="030000">Apurimac</option>
+                                            <option value="040000">Arequipa</option>
+                                            <option value="050000">Ayacucho</option>
+                                            <option value="060000">Cajamarca</option>
+                                            <option value="070000">Cuzco</option>
+                                            <option value="080000">Gobierno Regional del Callao</option>
+                                            <option value="090000">Huancavelica</option>
+                                            <option value="100000">Huánuco</option>
+                                            <option value="110000">Ica</option>
+                                            <option value="120000">Junin</option>
+                                            <option value="130000">La Libertad</option>
+                                            <option value="140000">Lambayeque</option>
+                                            <option value="160000">Loreto</option>
+                                            <option value="170000">Madre de Dios</option>
+                                            <option value="180000">Moquegua</option>
+                                            <option value="190000">Pasco</option>
+                                            <option value="200000">Piura</option>
+                                            <option value="210000">Puno</option>
+                                            <option value="220000">San Martín</option>
+                                            <option value="230000">Tacna</option>
+                                            <option value="240000">Tumbes</option>
+                                            <option value="250000">Ucayali</option>
+                                        </select>
+{{--                                        <i class="la la-map-marker"></i>--}}
                                 </div><!-- Search Widget -->
                             </div>
                         </div>
                         <div class="widget">
-                            <h3 class="sb-title open">Date Posted</h3>
+                            <h3 class="sb-title open">Fecha de publicación</h3>
                             <div class="posted_widget">
-                                <input type="radio" name="choose" id="232"><label for="232">Last Hour</label><br />
-                                <input type="radio" name="choose" id="wwqe"><label for="wwqe">Last 24 hours</label><br />
-                                <input type="radio" name="choose" id="erewr"><label for="erewr">Last 7 days</label><br />
-                                <input type="radio" name="choose" id="qwe"><label for="qwe">Last 14 days</label><br />
-                                <input type="radio" name="choose" id="wqe"><label for="wqe">Last 30 days</label><br />
-                                <input type="radio" name="choose" id="qweqw"><label class="nm" for="qweqw">All</label><br />
+                                <input type="radio" name="choose" id="232"><label for="232">Hoy</label><br />
+                                <input type="radio" name="choose" id="wwqe"><label for="wwqe">Últimos 3 días</label><br />
+                                <input type="radio" name="choose" id="erewr"><label for="erewr">Últimos 7 días</label><br />
+                                <input type="radio" name="choose" id="qwe"><label for="qwe">ÚÚltimos 15 días</label><br />
+                                <input type="radio" name="choose" id="wqe"><label for="wqe">Últimos 30 días</label><br />
+                                <input type="radio" name="choose" id="qweqw"><label class="nm" for="qweqw">Todo disponible</label><br />
                             </div>
                         </div>
                         <div class="widget">
-                            <h3 class="sb-title open">Job Type</h3>
+                            <h3 class="sb-title open">Tipo de trabajo</h3>
                             <div class="type_widget">
                                 <p class="flchek"><input type="checkbox" name="choosetype" id="33r"><label for="33r">Freelance (9)</label></p>
                                 <p class="ftchek"><input type="checkbox" name="choosetype" id="dsf"><label for="dsf">Full Time (8)</label></p>
@@ -40,28 +67,28 @@
                                 <p class="vtchek"><input type="checkbox" name="choosetype" id="ghgf"><label for="ghgf">Volunteer (8)</label></p>
                             </div>
                         </div>
-                        <div class="widget">
-                            <h3 class="sb-title open">Specialism</h3>
-                            <div class="specialism_widget">
-                                <div class="field_w_search">
-                                    <input type="text" placeholder="Search Spaecialisms" />
-                                </div><!-- Search Widget -->
-                                <div class="simple-checkbox scrollbar">
-                                    <p><input type="checkbox" name="spealism" id="as"><label for="as">Accountancy (2)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="asd"><label for="asd">Banking (2)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="errwe"><label for="errwe">Charity & Voluntary (3)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="fdg"><label for="fdg">Digital & Creative (4)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="sc"><label for="sc">Estate Agency (3)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="aw"><label for="aw">Graduate (2)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="ui"><label for="ui">IT Contractor (7)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="saas"><label for="saas">Charity & Voluntary (3)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="rrrt"><label for="rrrt">Digital & Creative (4)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="eweew"><label for="eweew">Estate Agency (3)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="bnbn"><label for="bnbn">Graduate (2)</label></p>
-                                    <p><input type="checkbox" name="spealism" id="ffd"><label for="ffd">IT Contractor (7)</label></p>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="widget">--}}
+{{--                            <h3 class="sb-title open">Specialism</h3>--}}
+{{--                            <div class="specialism_widget">--}}
+{{--                                <div class="field_w_search">--}}
+{{--                                    <input type="text" placeholder="Search Spaecialisms" />--}}
+{{--                                </div><!-- Search Widget -->--}}
+{{--                                <div class="simple-checkbox scrollbar">--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="as"><label for="as">Accountancy (2)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="asd"><label for="asd">Banking (2)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="errwe"><label for="errwe">Charity & Voluntary (3)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="fdg"><label for="fdg">Digital & Creative (4)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="sc"><label for="sc">Estate Agency (3)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="aw"><label for="aw">Graduate (2)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="ui"><label for="ui">IT Contractor (7)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="saas"><label for="saas">Charity & Voluntary (3)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="rrrt"><label for="rrrt">Digital & Creative (4)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="eweew"><label for="eweew">Estate Agency (3)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="bnbn"><label for="bnbn">Graduate (2)</label></p>--}}
+{{--                                    <p><input type="checkbox" name="spealism" id="ffd"><label for="ffd">IT Contractor (7)</label></p>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="widget">
                             <h3 class="sb-title closed">Offerd Salary</h3>
                             <div class="specialism_widget">
@@ -138,170 +165,50 @@
                     </aside>
                     <div class="col-lg-8 column">
                         <div class="modrn-joblist">
-                            <div class="tags-bar">
-                                <span>Full Time<i class="close-tag">x</i></span>
-                                <span>UX/UI Design<i class="close-tag">x</i></span>
-                                <span>Istanbul<i class="close-tag">x</i></span>
-                                <div class="action-tags">
-                                    <a href="job_list_modern.html#" title=""><i class="la la-cloud-download"></i> Save</a>
-                                    <a href="job_list_modern.html#" title=""><i class="la la-trash-o"></i> Clean</a>
-                                </div>
-                            </div><!-- Tags Bar -->
+{{--                            <div class="tags-bar">--}}
+{{--                                <span>Full Time<i class="close-tag">x</i></span>--}}
+{{--                                <span>UX/UI Design<i class="close-tag">x</i></span>--}}
+{{--                                <span>Istanbul<i class="close-tag">x</i></span>--}}
+{{--                                <div class="action-tags">--}}
+{{--                                    <a href="job_list_modern.html#" title=""><i class="la la-cloud-download"></i> Save</a>--}}
+{{--                                    <a href="job_list_modern.html#" title=""><i class="la la-trash-o"></i> Clean</a>--}}
+{{--                                </div>--}}
+{{--                            </div><!-- Tags Bar -->--}}
                             <div class="filterbar">
                                 <span class="emlthis"><a href="../../cdn-cgi/l/email-protection.html#d2b7aab3bfa2beb7fcb1bdbf" title=""><i class="la la-envelope-o"></i> Email me Jobs Like These</a></span>
                                 <div class="sortby-sec">
-                                    <span>Sort by</span>
+                                    <span>Ordenar por</span>
                                     <select data-placeholder="Most Recent" class="chosen">
+                                        <option>Fecha</option>
+                                        <option>Salario</option>
                                         <option>Most Recent</option>
                                         <option>Most Recent</option>
-                                        <option>Most Recent</option>
-                                        <option>Most Recent</option>
-                                    </select>
-                                    <select data-placeholder="20 Per Page" class="chosen">
-                                        <option>30 Per Page</option>
-                                        <option>40 Per Page</option>
-                                        <option>50 Per Page</option>
-                                        <option>60 Per Page</option>
                                     </select>
                                 </div>
-                                <h5>98 Jobs & Vacancies</h5>
+                                <h5>Se han encontrado 69 avisos link</h5>
                             </div>
                         </div><!-- MOdern Job LIst -->
                         <div class="job-list-modern">
                             <div class="job-listings-sec">
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l1.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Web Designer / Developer</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is ft">Full time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div>
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l2.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">C Developer (Senior) C .Net</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is pt ">Part time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l3.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Regional Sales Manager South</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is ft ">Full time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l4.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Marketing Dairector</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is ft ">Full time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l5.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Application Developer</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is pt ">Part time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l6.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Social Media and Public</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is fl ">Freelance</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l2.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">C Developer (Senior) C .Net</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is pt ">Part time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l3.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Regional Sales Manager South</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is ft ">Full time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l4.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Marketing Dairector</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is ft ">Full time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
-                                <div class="job-listing wtabs">
-                                    <div class="job-title-sec">
-                                        <div class="c-logo"> <img src="images/resource/l5.png" alt="" /> </div>
-                                        <h3><a href="job_list_modern.html#" title="">Application Developer</a></h3>
-                                        <span>Massimo Artemisis</span>
-                                        <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
-                                    </div>
-                                    <div class="job-style-bx">
-                                        <span class="job-is pt ">Part time</span>
-                                        <span class="fav-job"><i class="la la-heart-o"></i></span>
-                                        <i>5 months ago</i>
-                                    </div>
-                                </div><!-- Job -->
+                                @forelse($trabajos as $t)
+                                    <div class="job-listing wtabs" style="" onclick="window.location='{{ 'showJob/'.$t->code}}';" >
+                                        <div class="job-title-sec">
+                                            <div class="c-logo"> <img src="images/resource/l5.png" alt="" /> </div>
+                                            <h3><a href="job_list_modern.html#" title="">{{$t->name}}</a></h3>
+                                            <span>Massimo Artemisis</span>
+                                            <div class="job-lctn"><i class="la la-map-marker"></i>Sacramento, California</div>
+                                        </div>
+                                        <div class="job-style-bx">
+                                            <span class="job-is pt ">Part time</span>
+                                            <span class="fav-job"><i class="la la-heart-o"></i></span>
+                                            <i>5 months ago</i>
+                                        </div>
+                                    </div><!-- Job -->
 
+                                @empty
+                                @endforelse
                             </div>
-                            <div class="viewmore"><span><i></i><i></i><i></i>View More</span></div>
+                            {{$trabajos->links()}}
                         </div>
                     </div>
                 </div>

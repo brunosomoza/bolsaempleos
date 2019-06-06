@@ -25,9 +25,9 @@ class Controller extends BaseController
         if( Auth::user()->role_id == 1){
             $id = Auth::user()->id;
             $candidato = Candidate::find($id);
+            //$candidato = Candidate::with('profession')->where('user_id',$id)->get(); -- Trae las dos tablas candidate y profession x el id
             $url = Storage::temporaryUrl($candidato->picture, now()->addMinutes(5));
             return view('layouts.candidatos.perfil',compact('candidato','url'));
-
 
         } elseif (Auth::user()->role_id == 2 ) {
 
@@ -41,22 +41,28 @@ class Controller extends BaseController
         }
     }
 
-
-    function fetch(Request $request)
-    {
-        $select = $request->get('select');
-        $value = $request->get('value');
-        $dependent = $request->get('dependent');
-        $data = DB::table('Regions')
-            ->where('country_id', 1)
-            ->get();
-        $output = '<option value="">Select '.ucfirst($dependent).'</option>';
-        foreach($data as $row)
-        {
-            $output .= '<option value="'.$row->$dependent.'">'.$row->$dependent.'</option>';
-        }
-        echo $output;
+    public function mostrarRelacion(){
+        $id = Auth::user()->id;
+        $candidato = Candidate::with('profession','country','studies')->withCount('studies')->where('user_id',$id)->get();// Extrae todos los registros de la relacion que esten relacionadas con el user_id… genera un json
+        dd($candidato);
     }
+
+// Se borro no sabia donde se usa...
+//    function fetch(Request $request)
+//    {
+//        $select = $request->get('select');
+//        $value = $request->get('value');
+//        $dependent = $request->get('dependent');
+//        $data = DB::table('Regions')
+//            ->where('country_id', 1)
+//            ->get();
+//        $output = '<option value="">Select '.ucfirst($dependent).'</option>';
+//        foreach($data as $row)
+//        {
+//            $output .= '<option value="'.$row->$dependent.'">'.$row->$dependent.'</option>';
+//        }
+//        echo $output;
+//    }
 
 
     public function regencies(){

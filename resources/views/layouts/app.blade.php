@@ -3,22 +3,26 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Job Hunt</title>
+    <title>Entrevista Virtual</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="CreativeLayers">
 
+
+
+
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
-    <link rel="stylesheet" href="css/icons.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-    <link rel="stylesheet" type="text/css" href="css/chosen.css" />
-    <link rel="stylesheet" type="text/css" href="css/colors/colors.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap-grid.css') }}" />
+    <link rel="stylesheet" href="{{ URL::asset('css/icons.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('') }}css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/responsive.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/chosen.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/colors/colors.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap.css') }}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/bootstrap-datepicker.css') }}">
 
 </head>
 <body>
@@ -212,19 +216,19 @@
 </div><!-- Registro -->
 
 
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="js/modernizr.js" type="text/javascript"></script>
-<script src="js/script.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/wow.min.js" type="text/javascript"></script>
-<script src="js/slick.min.js" type="text/javascript"></script>
-<script src="js/parallax.js" type="text/javascript"></script>
-<script src="js/select-chosen.js" type="text/javascript"></script>
-<script src="js/jquery.scrollbar.min.js" type="text/javascript"></script>
+<script src="{{ URL::asset('js/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/modernizr.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/script.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/wow.min.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/slick.min.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/parallax.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/select-chosen.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/jquery.scrollbar.min.js') }}" type="text/javascript"></script>
 
 <!-- candidates_my_resume_add_new.html -->
-<script src="js/circle-progress.min.js" type="text/javascript"></script>
-
+<script src="{{ URL::asset('js/circle-progress.min.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
 @stack('java')
 
 </body>

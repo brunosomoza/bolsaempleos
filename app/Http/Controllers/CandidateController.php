@@ -5,11 +5,32 @@ namespace App\Http\Controllers;
 use App\Candidate;
 use App\Company;
 use Auth;
+use BigBlueButton\BigBlueButton;
+use BigBlueButton\Parameters\JoinMeetingParameters;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class CandidateController extends Controller
 {
+
+    public function unirseReunion(){
+        return view('layouts.candidatos.room');
+    }
+
+    public function unirseReunionPost(Request $request){
+
+        $bbb = new BigBlueButton();
+        $meetingID = $request->get('meetingID');
+        $name = $request->get('name');
+        $password = $request->get('attendee_password');
+        // $moderator_password for moderator
+        $joinMeetingParams = new JoinMeetingParameters($meetingID, $name, $password);
+        $joinMeetingParams->setRedirect(true);
+        $url = $bbb->getJoinMeetingURL($joinMeetingParams);
+
+        header('Location:' . $url);
+    }
+
     public  function  actualizarContacto( Request $request){
         $id = Auth::user()->id;
         $candidato = Candidate::find($id);

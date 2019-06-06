@@ -12,7 +12,7 @@
     </div>
     <div class="responsive-opensec">
         <div class="btn-extars">
-            <a href="how_it_works.html#" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
+            <a href="how_it_works.html#" title="" class="post-job-btn"><i class="la la-plus"></i>Anonimo</a>
             <ul class="account-btns">
                 <li class="signup-popup"><a title=""><i class="la la-user"></i> Registro</a></li>
                 <li class="signin-popup"><a title=""><i class="la la-key"></i> Entrar</a></li>
@@ -128,7 +128,7 @@
                 <a href="index.html" title=""><img src="images/resource/logo.png" alt=""></a>
             </div><!-- Logo -->
             <div class="btn-extars">
-                <a href="how_it_works.html#" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
+                <a href="how_it_works.html#" title="" class="post-job-btn"><i class="la la-plus"></i>Anonimo</a>
                 <ul class="account-btns">
                     <li class="signup-popup"><a title=""><i class="la la-user"></i> Registro</a></li>
                     <li class="signin-popup"><a title=""><i class="la la-key"></i> Entrar</a></li>

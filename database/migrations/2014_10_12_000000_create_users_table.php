@@ -100,7 +100,7 @@ class CreateUsersTable extends Migration
             $table->string('code_districts')->nullable();
             $table->string('ruc')->nullable();
             $table->string('address')->nullable();
-            $table->string('logo')->nullable();
+            $table->string('logo')->default('user.png');
             $table->string('website')->nullable();
             $table->string('namesocial')->nullable();
             $table->string('telephone')->nullable();
@@ -132,7 +132,7 @@ class CreateUsersTable extends Migration
             $table->string('address')->nullable();
             $table->string('civil')->nullable();
             $table->text('skills')->nullable();
-            $table->string('picture')->nullable();
+            $table->string('picture')->default('user.png');
             $table->string('title')->nullable();
             $table->string('district')->nullable();
             $table->string('language')->nullable();
@@ -165,9 +165,11 @@ class CreateUsersTable extends Migration
 
             $table->string('name')->nullable();
             $table->string('title')->nullable();
-            $table->string('description')->nullable();
+            $table->multiLineString('description')->nullable();
             $table->dateTime('start')->nullable();
             $table->dateTime('close')->nullable();
+            $table->date('fecha_contratacion')->nullable();
+            $table->unsignedInteger('experiencia')->nullable();
             $table->unsignedInteger('salary')->nullable();
             $table->boolean('disability')->nullable()->default(false);
             $table->string('status')->nullable();

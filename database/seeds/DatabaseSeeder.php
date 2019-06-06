@@ -30,9 +30,14 @@ class DatabaseSeeder extends Seeder
         factory(\App\Industry::class, 10)->create();
         factory(\App\Profession::class,10)->create();
 
-        factory(\App\User::class, 1)->create(['email' => 'bruno@bruno.com', 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'])
+        factory(\App\User::class, 1)->create(['email' => 'candidato@candidato.com', 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'role_id' => 1])
             ->each(function (\App\User $u) {
                 factory(\App\Candidate::class, 1)->create(['user_id' => $u->id]);
+            });
+
+        factory(\App\User::class, 1)->create(['email' => 'empresa@empresa.com', 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'role_id' => 2])
+            ->each(function (\App\User $u) {
+                factory(\App\Company::class, 1)->create(['user_id' => $u->id]);
             });
 
         factory(\App\User::class, 10)->create()

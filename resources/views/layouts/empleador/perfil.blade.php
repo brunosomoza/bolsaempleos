@@ -245,7 +245,6 @@
                                         </div>
                                         <div class="col-lg-12">
                                             <button type="submit">Actualizar información </button>
-                                            <input type="button" name="x1" id="x1" value="borrar">
                                         </div>
                                     </div>
                                     {{ csrf_field() }}
@@ -272,9 +271,6 @@
 
         $(document).ready(function(){
 
-            $("#x1").click(function () {
-                alert($("#distritos").val());
-            });
 
             // Department Change
             $("#departamentos").change(function(){

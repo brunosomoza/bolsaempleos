@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Job Hunt</title>
+    <title>Entrevista Virtual - Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -53,84 +53,84 @@
                 <input type="text" placeholder="Job title, keywords or company name" />
                 <button type="submit"><i class="la la-search"></i></button>
             </form>
-            <div class="responsivemenu">
-                <ul>
-                    <li class="menu-item-has-children">
-                        <a href="#" title="">Employers</a>
-                        <ul>
-                            <li><a href="employer_list1.html" title=""> Employer List 1</a></li>
-                            <li><a href="employer_list2.html" title="">Employer List 2</a></li>
-                            <li><a href="employer_list3.html" title="">Employer List 3</a></li>
-                            <li><a href="employer_list4.html" title="">Employer List 4</a></li>
-                            <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
-                            <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#" title="">Employer Dashboard</a>
-                                <ul>
-                                    <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
-                                    <li><a href="employer_packages.html" title="">Employer Packages</a></li>
-                                    <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
-                                    <li><a href="employer_profile.html" title="">Employer Profile</a></li>
-                                    <li><a href="employer_resume.html" title="">Employer Resume</a></li>
-                                    <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
-                                    <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
-                                    <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#" title="">Candidates</a>
-                        <ul>
-                            <li><a href="candidates_list.html" title="">Candidates List 1</a></li>
-                            <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
-                            <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
-                            <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
-                            <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#" title="">Candidates Dashboard</a>
-                                <ul>
-                                    <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
-                                    <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
-                                    <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
-                                    <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
-                                    <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
-                                    <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
-                                    <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
-                                    <li><a href="candidates_change_password.html" title="">Change Password</a></li>
-                                    <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#" title="">Job</a>
-                        <ul>
-                            <li><a href="job_list_classic.html">Job List Classic</a></li>
-                            <li><a href="job_list_grid.html">Job List Grid</a></li>
-                            <li><a href="job_list_modern.html">Job List Modern</a></li>
-                            <li><a href="job_single1.html">Job Single 1</a></li>
-                            <li><a href="job_single2.html">Job Single 2</a></li>
-                            <li><a href="job-single3.html">Job Single 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#" title="">Pages</a>
-                        <ul>
-                            <li><a href="about.html" title="">About Us</a></li>
-                            <li><a href="404.html" title="">404 Error</a></li>
-                            <li><a href="contact.html" title="">Contact Us 1</a></li>
-                            <li><a href="contact2.html" title="">Contact Us 2</a></li>
-                            <li><a href="faq.html" title="">FAQ's</a></li>
-                            <li><a href="how_it_works.html" title="">How it works</a></li>
-                            <li><a href="login.html" title="">Login</a></li>
-                            <li><a href="pricing.html" title="">Pricing Plans</a></li>
-                            <li><a href="register.html" title="">Register</a></li>
-                            <li><a href="terms_and_condition.html" title="">Terms & Condition</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+{{--            <div class="responsivemenu">--}}
+{{--                <ul>--}}
+{{--                    <li class="menu-item-has-children">--}}
+{{--                        <a href="#" title="">Employers</a>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="employer_list1.html" title=""> Employer List 1</a></li>--}}
+{{--                            <li><a href="employer_list2.html" title="">Employer List 2</a></li>--}}
+{{--                            <li><a href="employer_list3.html" title="">Employer List 3</a></li>--}}
+{{--                            <li><a href="employer_list4.html" title="">Employer List 4</a></li>--}}
+{{--                            <li><a href="employer_single1.html" title="">Employer Single 1</a></li>--}}
+{{--                            <li><a href="employer_single2.html" title="">Employer Single 2</a></li>--}}
+{{--                            <li class="menu-item-has-children">--}}
+{{--                                <a href="#" title="">Employer Dashboard</a>--}}
+{{--                                <ul>--}}
+{{--                                    <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>--}}
+{{--                                    <li><a href="employer_packages.html" title="">Employer Packages</a></li>--}}
+{{--                                    <li><a href="employer_post_new.html" title="">Employer Post New</a></li>--}}
+{{--                                    <li><a href="employer_profile.html" title="">Employer Profile</a></li>--}}
+{{--                                    <li><a href="employer_resume.html" title="">Employer Resume</a></li>--}}
+{{--                                    <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>--}}
+{{--                                    <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>--}}
+{{--                                    <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                    <li class="menu-item-has-children">--}}
+{{--                        <a href="#" title="">Candidates</a>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="candidates_list.html" title="">Candidates List 1</a></li>--}}
+{{--                            <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>--}}
+{{--                            <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>--}}
+{{--                            <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>--}}
+{{--                            <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>--}}
+{{--                            <li class="menu-item-has-children">--}}
+{{--                                <a href="#" title="">Candidates Dashboard</a>--}}
+{{--                                <ul>--}}
+{{--                                    <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>--}}
+{{--                                    <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>--}}
+{{--                                    <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>--}}
+{{--                                    <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>--}}
+{{--                                    <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>--}}
+{{--                                    <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>--}}
+{{--                                    <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>--}}
+{{--                                    <li><a href="candidates_change_password.html" title="">Change Password</a></li>--}}
+{{--                                    <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                    <li class="menu-item-has-children">--}}
+{{--                        <a href="#" title="">Job</a>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="job_list_classic.html">Job List Classic</a></li>--}}
+{{--                            <li><a href="job_list_grid.html">Job List Grid</a></li>--}}
+{{--                            <li><a href="job_list_modern.html">Job List Modern</a></li>--}}
+{{--                            <li><a href="job_single1.html">Job Single 1</a></li>--}}
+{{--                            <li><a href="job_single2.html">Job Single 2</a></li>--}}
+{{--                            <li><a href="job-single3.html">Job Single 3</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                    <li class="menu-item-has-children">--}}
+{{--                        <a href="#" title="">Pages</a>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="about.html" title="">About Us</a></li>--}}
+{{--                            <li><a href="404.html" title="">404 Error</a></li>--}}
+{{--                            <li><a href="contact.html" title="">Contact Us 1</a></li>--}}
+{{--                            <li><a href="contact2.html" title="">Contact Us 2</a></li>--}}
+{{--                            <li><a href="faq.html" title="">FAQ's</a></li>--}}
+{{--                            <li><a href="how_it_works.html" title="">How it works</a></li>--}}
+{{--                            <li><a href="login.html" title="">Login</a></li>--}}
+{{--                            <li><a href="pricing.html" title="">Pricing Plans</a></li>--}}
+{{--                            <li><a href="register.html" title="">Register</a></li>--}}
+{{--                            <li><a href="terms_and_condition.html" title="">Terms & Condition</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
         </div>
     </div>
 
@@ -144,79 +144,63 @@
                 <nav>
                     <ul>
                         <li class="menu-item-has-children">
-                            <a href="#" title="">Employers</a>
+                            <a href="#" title="">BUSCO TRABAJO</a>
                             <ul>
-                                <li><a href="employer_list1.html" title=""> Employer List 1</a></li>
-                                <li><a href="employer_list2.html" title="">Employer List 2</a></li>
-                                <li><a href="employer_list3.html" title="">Employer List 3</a></li>
-                                <li><a href="employer_list4.html" title="">Employer List 4</a></li>
-                                <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
-                                <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#" title="">Employer Dashboard</a>
-                                    <ul>
-                                        <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
-                                        <li><a href="employer_packages.html" title="">Employer Packages</a></li>
-                                        <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
-                                        <li><a href="employer_profile.html" title="">Employer Profile</a></li>
-                                        <li><a href="employer_resume.html" title="">Employer Resume</a></li>
-                                        <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
-                                        <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
-                                        <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="employer_list1.html" title="">Full Time</a></li>
+                                <li><a href="employer_list2.html" title="">Part Time</a></li>
+                                <li><a href="employer_list3.html" title="">Virtual Remoto</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item-has-children">
-                            <a href="#" title="">Candidates</a>
-                            <ul>
-                                <li><a href="candidates_list.html" title="">Candidates List 1</a></li>
-                                <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
-                                <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
-                                <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
-                                <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#" title="">Candidates Dashboard</a>
-                                    <ul>
-                                        <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
-                                        <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
-                                        <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
-                                        <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
-                                        <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
-                                        <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
-                                        <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
-                                        <li><a href="candidates_change_password.html" title="">Change Password</a></li>
-                                        <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#" title="">Job</a>
-                            <ul>
-                                <li><a href="job_list_classic.html">Job List Classic</a></li>
-                                <li><a href="job_list_grid.html">Job List Grid</a></li>
-                                <li><a href="job_list_modern.html">Job List Modern</a></li>
-                                <li><a href="job_single1.html">Job Single 1</a></li>
-                                <li><a href="job_single2.html">Job Single 2</a></li>
-                                <li><a href="job-single3.html">Job Single 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#" title="">Pages</a>
-                            <ul>
-                                <li><a href="about.html" title="">About Us</a></li>
-                                <li><a href="404.html" title="">404 Error</a></li>
-                                <li><a href="contact.html" title="">Contact Us 1</a></li>
-                                <li><a href="contact2.html" title="">Contact Us 2</a></li>
-                                <li><a href="faq.html" title="">FAQ's</a></li>
-                                <li><a href="how_it_works.html" title="">How it works</a></li>
-                                <li><a href="login.html" title="">Login</a></li>
-                                <li><a href="pricing.html" title="">Pricing Plans</a></li>
-                                <li><a href="register.html" title="">Register</a></li>
-                                <li><a href="terms_and_condition.html" title="">Terms & Condition</a></li>
-                            </ul>
-                        </li>
+{{--                        <li class="menu-item-has-children">--}}
+{{--                            <a href="#" title="">Candidates</a>--}}
+{{--                            <ul>--}}
+{{--                                <li><a href="candidates_list.html" title="">Candidates List 1</a></li>--}}
+{{--                                <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>--}}
+{{--                                <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>--}}
+{{--                                <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>--}}
+{{--                                <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>--}}
+{{--                                <li class="menu-item-has-children">--}}
+{{--                                    <a href="#" title="">Candidates Dashboard</a>--}}
+{{--                                    <ul>--}}
+{{--                                        <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>--}}
+{{--                                        <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>--}}
+{{--                                        <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>--}}
+{{--                                        <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>--}}
+{{--                                        <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>--}}
+{{--                                        <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>--}}
+{{--                                        <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>--}}
+{{--                                        <li><a href="candidates_change_password.html" title="">Change Password</a></li>--}}
+{{--                                        <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
+{{--                        <li class="menu-item-has-children">--}}
+{{--                            <a href="#" title="">Job</a>--}}
+{{--                            <ul>--}}
+{{--                                <li><a href="job_list_classic.html">Job List Classic</a></li>--}}
+{{--                                <li><a href="job_list_grid.html">Job List Grid</a></li>--}}
+{{--                                <li><a href="job_list_modern.html">Job List Modern</a></li>--}}
+{{--                                <li><a href="job_single1.html">Job Single 1</a></li>--}}
+{{--                                <li><a href="job_single2.html">Job Single 2</a></li>--}}
+{{--                                <li><a href="job-single3.html">Job Single 3</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
+{{--                        <li class="menu-item-has-children">--}}
+{{--                            <a href="#" title="">Pages</a>--}}
+{{--                            <ul>--}}
+{{--                                <li><a href="about.html" title="">About Us</a></li>--}}
+{{--                                <li><a href="404.html" title="">404 Error</a></li>--}}
+{{--                                <li><a href="contact.html" title="">Contact Us 1</a></li>--}}
+{{--                                <li><a href="contact2.html" title="">Contact Us 2</a></li>--}}
+{{--                                <li><a href="faq.html" title="">FAQ's</a></li>--}}
+{{--                                <li><a href="how_it_works.html" title="">How it works</a></li>--}}
+{{--                                <li><a href="login.html" title="">Login</a></li>--}}
+{{--                                <li><a href="pricing.html" title="">Pricing Plans</a></li>--}}
+{{--                                <li><a href="register.html" title="">Register</a></li>--}}
+{{--                                <li><a href="terms_and_condition.html" title="">Terms & Condition</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                     </ul>
                 </nav><!-- Menus -->
             </div>
@@ -236,23 +220,44 @@
                             </ul>
                             <div class="job-search-sec">
                                 <div class="job-search">
-                                    <h3>The Easiest Way to Get Your New Job</h3>
-                                    <span>Find Jobs, Employment & Career Opportunities</span>
+                                    <h3>La forma más fácil de conseguir trabajo</h3>
+                                    <span>Trabajar desde tu casa, ya es una realidad</span>
                                     <form>
                                         <div class="row">
                                             <div class="col-lg-7 col-md-5 col-sm-12 col-xs-12">
                                                 <div class="job-field">
-                                                    <input type="text" placeholder="Job title, keywords or company name" />
+                                                    <input type="text" placeholder="Escribe cargo o área profesional" />
                                                     <i class="la la-keyboard-o"></i>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
                                                 <div class="job-field">
-                                                    <select data-placeholder="City, province or region" class="chosen-city">
-                                                        <option>Istanbul</option>
-                                                        <option>New York</option>
-                                                        <option>London</option>
-                                                        <option>Russia</option>
+                                                    <select data-placeholder="Departamento ó ciudad" class="chosen-city">
+                                                        <option value="150000">Lima</option>
+                                                        <option value="010000">Amazonas</option>
+                                                        <option value="020000">Ancash</option>
+                                                        <option value="030000">Apurimac</option>
+                                                        <option value="040000">Arequipa</option>
+                                                        <option value="050000">Ayacucho</option>
+                                                        <option value="060000">Cajamarca</option>
+                                                        <option value="070000">Cuzco</option>
+                                                        <option value="080000">Gobierno Regional del Callao</option>
+                                                        <option value="090000">Huancavelica</option>
+                                                        <option value="100000">Huánuco</option>
+                                                        <option value="110000">Ica</option>
+                                                        <option value="120000">Junin</option>
+                                                        <option value="130000">La Libertad</option>
+                                                        <option value="140000">Lambayeque</option>
+                                                        <option value="160000">Loreto</option>
+                                                        <option value="170000">Madre de Dios</option>
+                                                        <option value="180000">Moquegua</option>
+                                                        <option value="190000">Pasco</option>
+                                                        <option value="200000">Piura</option>
+                                                        <option value="210000">Puno</option>
+                                                        <option value="220000">San Martín</option>
+                                                        <option value="230000">Tacna</option>
+                                                        <option value="240000">Tumbes</option>
+                                                        <option value="250000">Ucayali</option>
                                                     </select>
                                                     <i class="la la-map-marker"></i>
                                                 </div>
@@ -263,8 +268,8 @@
                                         </div>
                                     </form>
                                     <div class="or-browser">
-                                        <span>Browse job offers by</span>
-                                        <a href="#" title="">Category</a>
+                                        <span>Buscar ofertas de trabajo por</span>
+                                        <a href="#" title="">Categoría</a>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +289,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="heading">
-                            <h2>Popular Categories</h2>
+                            <h2>Categorías Populares</h2>
                             <span>37 jobs live - 0 added today.</span>
                         </div><!-- Heading -->
                         <div class="cat-sec">
